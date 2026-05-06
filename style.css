@@ -1,0 +1,451 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(239, 234, 227);
+}
+
+
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+  padding: 25px 0;
+}
+
+.nav-item{
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  padding: 8px 18px;
+  margin-left: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.nav-item:hover{
+  background-color: black;
+  cursor: pointer;
+}
+
+.nav-item:hover .nav-link{
+  color: white;
+}
+
+.nav-link{
+  color: black;
+  font-weight: 500;
+}
+
+
+/* ================= HERO SECTION ================= */
+
+.hero{
+  margin-top: 90px;
+}
+
+
+/* LEFT TEXT */
+#box1 h2{
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: 500;
+}
+
+
+/* RIGHT BIG HEADING */
+#box2 h1{
+  font-size: 170px;
+  letter-spacing: -5px;
+  line-height: 140px;
+  font-weight: 900;
+  text-align: right;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px){
+
+  #box2 h1{
+    font-size: 90px;
+    line-height: 80px;
+  }
+
+  #box1{
+    margin-bottom: 40px;
+  }
+
+}
+
+/* ================= VIDEO SECTION ================= */
+
+.video-section{
+  margin-top: 80px;
+}
+
+.video-wrapper{
+  width: 100%;
+  height: 85vh;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-wrapper video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* IMPORTANT */
+}
+
+
+/* ================= SCROLLING TEXT ================= */
+
+.scroll-text{
+  margin-top: 80px;
+  overflow: hidden;
+  background: rgb(239, 234, 227);
+}
+
+.scroll-wrapper{
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.scroll-content{
+  display: inline-flex;
+  gap: 60px;
+  animation: scrollMove 18s linear infinite;
+}
+
+.scroll-content h1{
+  font-size: 120px;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.scroll-content span{
+  color: #ff5a00;   /* Orange color */
+}
+
+
+/* Animation */
+@keyframes scrollMove{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =============== detail section ================ */
+
+.data{
+  margin-top: 150px;
+  padding: 20px 20px;
+  display: flex;
+}
+
+.databox h1 {
+  font-size: 60px;
+  line-height: 0.9;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.databox img {
+  margin-left: 250px;
+  margin-top: 120px;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.databox p {
+  margin-left: 250px;
+  margin-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  width: 350px;
+}
+
+
+
+/* ============ project section ============== */
+
+.para {
+  margin-left: 40px; 
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.para span {
+  color: #ff5a00;
+}
+
+/* ================= PROJECT SECTION ================= */
+
+.projects{
+  margin-top: 120px;
+}
+
+/* Each Row */
+.project-row{
+  position: relative;
+  padding: 30px 20px 0px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Big Title */
+.project-row h2{
+  font-size: 60px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+/* Right small text */
+.project-row span{
+  font-size: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover Background Animation */
+.project-row::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: #fe980a;
+  transition: height 0.5s ease;
+  z-index: 1;
+}
+
+/* On Hover fill upward */
+.project-row:hover::before{
+  height: 100%;
+}
+
+/* Text color change */
+.project-row:hover h2,
+.project-row:hover span{
+  color: white;
+}
+
+
+/* ================project button=============  */
+
+.btn{
+  margin-top: 60px;
+}
+
+/* ================== display nd images ============== */
+
+.whole-container { 
+  margin-top: 100px;
+  margin-left: 35px;
+}
+
+.big-box {
+  width: 98%;
+  height: 800px;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+}
+
+.b-box1{
+  border: none;
+  height: 800px;
+  width: 50%;
+  background-color: black;
+}
+
+.line{
+  height: 220px;
+  margin-left: 140px;
+  margin-top: 200px;
+  border-left: 2px solid white;
+
+}
+
+.line h1{
+  color: white;
+  font-size: 60px;
+  margin-left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pr{
+  margin-left: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #504a45;
+}
+
+.line p{
+  margin-top: 20px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================box image================ */
+
+.b-box1 img{
+  height: 800px;
+  width: 100%;
+  
+}
+
+
+/* ================= CLIENT SECTION ================= */
+
+.clients{
+  margin-top: 120px;
+  padding-bottom: 60px;
+}
+
+/* Section Title */
+.clients-header h3{
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: rgba(0,0,0,0.6);
+  margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.clients-grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+/* Each Logo */
+.client{
+  opacity: 0.6;
+  transition: all 0.4s ease;
+}
+
+.client img{
+  width: 100%;
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(100%);
+}
+
+/* Hover Effect */
+.client:hover{
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+.client:hover img{
+  filter: grayscale(0%);
+}
+
+
+@media (max-width: 992px){
+  .clients-grid{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px){
+  .clients-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ============== scroll section ============= */
+
+.clients {
+  margin-left: 30px;
+  margin-right: 30px;
+  overflow: hidden;
+}
+
+.clients-grid{
+  overflow-x: auto;     
+  scroll-behavior: smooth;
+  cursor: pointer;
+} 
+
+.clients-header span{
+  color: #fe980a;
+  padding-right: 10px;
+}
+
+
+.client{
+  width: 258px;
+  border-left: 1px solid rgba(75, 74, 74, 0.714);
+  margin-right: 100px;
+}
+
+.client img{
+  height: 90px;
+  padding-left: 20px;
+}
+
+.client p{
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  padding-left: 30px;
+}
+
+
+/* ================page-3 & page-4=============== */
+
+.page4{
+  height: 100vh;
+  background: linear-gradient(to bottom, #ff5f00, #000000) ;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.heading{
+  color: white;  
+}
+
+.heading h1{
+  font-size: 50vh;  
+}
+
+.hr-line{
+  border-top: 1px solid white;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name p{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.name a{
+  text-decoration: none;
+  color: white;
+}
+
+.name a:hover{
+  color: blue;
+}
